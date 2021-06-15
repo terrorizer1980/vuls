@@ -591,6 +591,7 @@ func (l *base) scanLibraries() (err error) {
 		if path, err = filepath.Abs(path); err != nil {
 			return xerrors.Errorf("Failed to abs the lockfile. err: %w, filepath: %s", err, path)
 		}
+		l.log.Info("Lockfile found: %s", path)
 
 		// skip already exist
 		if _, ok := libFilemap[path]; ok {
