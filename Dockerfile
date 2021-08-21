@@ -11,7 +11,7 @@ COPY . $GOPATH/src/$REPOSITORY
 RUN cd $GOPATH/src/$REPOSITORY && make install
 
 
-FROM alpine:3.13
+FROM alpine:latest
 
 LABEL maintainer hikachan sadayuki-matsuno
 
